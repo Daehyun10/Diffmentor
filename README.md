@@ -1,8 +1,10 @@
 # DiffMentor
 
+[English](README.md) | [한국어](README.ko.md)
+
 Beginner-friendly AI Pull Request mentor for GitHub. DiffMentor reviews PR diffs and returns Markdown with severity labels, clear reasoning, fix suggestions, example code, test ideas, confidence, and learning notes.
 
-> Positioning: not just "AI found problems", but "a friendly senior developer explains the review so the author learns."
+> DiffMentor is not just "AI found problems." It explains code review like a friendly senior developer so the author can learn while fixing the PR.
 
 ![DiffMentor demo](docs/demo.svg)
 
@@ -17,7 +19,7 @@ Beginner-friendly AI Pull Request mentor for GitHub. DiffMentor reviews PR diffs
 - Review focus: general, security, performance, frontend, testing
 - Output language: Korean or English
 - Review style: mentor, checklist, strict
-- CLI usage with `diffmentor`
+- CLI support
 - GitHub Actions integration that comments on PRs automatically
 - Token-aware diff truncation
 
@@ -36,18 +38,18 @@ API keys are used only in the server/API process, CLI process, or GitHub Actions
 
 ## Review Quality Standard
 
-DiffMentor is prompted to behave like a principal-level reviewer, not a generic chatbot. A high-quality review should:
+DiffMentor is prompted to behave like a principal-level reviewer, not a generic chatbot.
 
-- stay grounded in the provided diff
-- avoid inventing issues when context is missing
-- separate blocking issues from ordinary suggestions
-- assign severity using production impact
-- explain why each issue matters
-- describe when the issue fails in practice
-- suggest a concrete fix
-- suggest a concrete test
-- include confidence for each finding
-- teach one or two reusable concepts for beginners
+- stays grounded in the provided diff
+- avoids inventing issues when context is missing
+- separates blocking issues from ordinary suggestions
+- assigns severity using production impact
+- explains why each issue matters
+- describes when the issue fails in practice
+- suggests a concrete fix
+- suggests a concrete test
+- includes confidence for each finding
+- teaches one or two reusable concepts for beginners
 
 ## Tech Stack
 
@@ -58,38 +60,6 @@ DiffMentor is prompted to behave like a principal-level reviewer, not a generic 
 - AI API: OpenAI API
 - CLI: Node.js
 - Markdown rendering: react-markdown
-
-## Folder Structure
-
-```txt
-diffmentor/
-├─ .github/
-│  ├─ workflows/
-│  │  └─ ai-code-reviewer.yml
-│  └─ pull_request_template.md
-├─ app/
-│  ├─ api/review/route.ts
-│  ├─ globals.css
-│  ├─ layout.tsx
-│  └─ page.tsx
-├─ docs/
-│  └─ demo.svg
-├─ lib/
-│  ├─ demoReview.ts
-│  ├─ github.ts
-│  ├─ openai.ts
-│  ├─ reviewOptions.ts
-│  └─ reviewPrompt.ts
-├─ scripts/
-│  ├─ ai-code-reviewer.mjs
-│  └─ github-action.mjs
-├─ action.yml
-├─ .env.example
-├─ CONTRIBUTING.md
-├─ LICENSE
-├─ package.json
-└─ README.md
-```
 
 ## Installation
 
@@ -197,8 +167,6 @@ jobs:
           style: mentor
 ```
 
-The action uses GitHub's built-in `${{ github.token }}` for PR comments and `OPENAI_API_KEY` from repository secrets.
-
 ## API
 
 `POST /api/review`
@@ -220,12 +188,11 @@ The action uses GitHub's built-in `${{ github.token }}` for PR comments and `OPE
 
 Most AI review tools are optimized for finding issues. DiffMentor is optimized for teaching the developer during review.
 
-Strong differentiators:
-
-- Learning Notes section
 - beginner-first explanations
-- CLI plus GitHub Actions support
-- focus modes for security, performance, frontend, and testing
+- concrete failure scenarios and impact
+- fix examples and test suggestions
+- Web, CLI, and GitHub Actions support
+- security, performance, frontend, and testing-focused modes
 - Markdown output that works across web, terminal, and PR comments
 
 ## Roadmap
