@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="980" viewBox="0 0 1440 980" role="img" aria-labelledby="title desc">
+  <title id="title">AI Code Reviewer demo</title>
+  <desc id="desc">Demo screenshot-style preview of the AI Code Reviewer web app showing review options and Markdown review output.</desc>
+  <rect width="1440" height="980" fill="#f5f7fb"/>
+  <rect x="0" y="0" width="1440" height="278" fill="#ffffff"/>
+  <line x1="0" y1="278" x2="1440" y2="278" stroke="#d9dee8"/>
+
+  <text x="72" y="64" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" fill="#275cc8">Beginner-friendly PR mentor</text>
+  <text x="72" y="116" font-family="Arial, Helvetica, sans-serif" font-size="46" font-weight="800" fill="#17191f">AI Code Reviewer</text>
+  <text x="72" y="154" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#566273">Review a GitHub Pull Request as Markdown with severity labels, fix examples, and learning notes.</text>
+
+  <rect x="72" y="190" width="118" height="64" rx="8" fill="#fbfcff" stroke="#d9dee8"/>
+  <text x="88" y="216" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#687386">MODES</text>
+  <text x="88" y="238" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#242a34">Web CLI Action</text>
+  <rect x="202" y="190" width="118" height="64" rx="8" fill="#fbfcff" stroke="#d9dee8"/>
+  <text x="218" y="216" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#687386">OUTPUT</text>
+  <text x="218" y="238" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#242a34">Markdown</text>
+  <rect x="332" y="190" width="118" height="64" rx="8" fill="#fbfcff" stroke="#d9dee8"/>
+  <text x="348" y="216" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#687386">KEYS</text>
+  <text x="348" y="238" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#242a34">Server only</text>
+
+  <rect x="530" y="42" width="838" height="196" rx="8" fill="#fbfcff" stroke="#d9dee8"/>
+  <text x="554" y="74" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#2c3340">Repository URL</text>
+  <rect x="554" y="86" width="520" height="44" rx="6" fill="#ffffff" stroke="#c8d0dc"/>
+  <text x="570" y="114" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#17191f">https://github.com/vercel/next.js</text>
+  <text x="1090" y="74" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#2c3340">PR Number</text>
+  <rect x="1090" y="86" width="120" height="44" rx="6" fill="#ffffff" stroke="#c8d0dc"/>
+  <text x="1106" y="114" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#17191f">123</text>
+  <rect x="1226" y="86" width="118" height="44" rx="6" fill="#1f6feb"/>
+  <text x="1255" y="114" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#ffffff">Review PR</text>
+
+  <text x="554" y="158" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#2c3340">Audience</text>
+  <rect x="554" y="170" width="150" height="40" rx="6" fill="#ffffff" stroke="#c8d0dc"/>
+  <text x="570" y="195" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#17191f">Beginner</text>
+  <text x="724" y="158" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#2c3340">Focus</text>
+  <rect x="724" y="170" width="150" height="40" rx="6" fill="#ffffff" stroke="#c8d0dc"/>
+  <text x="740" y="195" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#17191f">Security</text>
+  <text x="894" y="158" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#2c3340">Style</text>
+  <rect x="894" y="170" width="150" height="40" rx="6" fill="#ffffff" stroke="#c8d0dc"/>
+  <text x="910" y="195" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#17191f">Mentor</text>
+  <text x="1064" y="158" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#2c3340">Language</text>
+  <rect x="1064" y="170" width="118" height="40" rx="6" fill="#ffffff" stroke="#c8d0dc"/>
+  <rect x="1068" y="174" width="54" height="32" rx="4" fill="#275cc8"/>
+  <text x="1085" y="195" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#ffffff">KO</text>
+  <text x="1140" y="195" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#566273">EN</text>
+
+  <text x="72" y="340" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="800" fill="#17191f">Review Result</text>
+  <text x="72" y="366" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#687386">vercel/next.js #123 · 3 files · beginner/security/mentor · Demo mode</text>
+  <rect x="1190" y="322" width="178" height="40" rx="6" fill="#ffffff" stroke="#c8d0dc"/>
+  <text x="1225" y="347" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#2c3340">Copy Markdown</text>
+
+  <rect x="72" y="390" width="1296" height="520" rx="8" fill="#ffffff" stroke="#d9dee8"/>
+  <rect x="96" y="414" width="1248" height="48" rx="6" fill="#fff9e8" stroke="#f0d28a"/>
+  <text x="116" y="444" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#7a5300">Demo mode is active because OPENAI_API_KEY or GITHUB_TOKEN is missing. Add keys to .env.local for real PR analysis.</text>
+
+  <text x="96" y="506" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="800" fill="#17191f">AI Code Review</text>
+  <text x="96" y="548" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="800" fill="#17191f">Review Snapshot</text>
+  <text x="120" y="580" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#24292f">• Overall risk: Medium</text>
+  <text x="120" y="608" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#24292f">• Release recommendation: Approve with follow-up</text>
+  <text x="120" y="636" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#24292f">• Main reason: production usage depends on error handling, diff budgeting, and tests.</text>
+
+  <text x="96" y="690" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="800" fill="#17191f">Issues And Suggestions</text>
+  <text x="96" y="730" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="800" fill="#17191f">1. [Severity: Medium] Error messages should guide the next action</text>
+  <text x="120" y="762" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#24292f">• Evidence from diff: GitHub API failures are handled at the server boundary.</text>
+  <text x="120" y="790" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#24292f">• Why it matters: beginner developers use the error message as their debugging map.</text>
+  <text x="120" y="818" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#24292f">• Suggested test: mock GitHub 401, 403, and 404 responses.</text>
+  <text x="120" y="846" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#24292f">• Confidence: High</text>
+</svg>

@@ -1,0 +1,40 @@
+name: AI Code Reviewer
+description: Beginner-friendly AI Pull Request mentor with Markdown review comments.
+author: AI Code Reviewer contributors
+
+inputs:
+  audience:
+    description: Review audience: beginner, intermediate, or senior.
+    required: false
+    default: beginner
+  focus:
+    description: Review focus: general, security, performance, frontend, or testing.
+    required: false
+    default: general
+  language:
+    description: Output language: ko or en.
+    required: false
+    default: ko
+  style:
+    description: Review style: mentor, checklist, or strict.
+    required: false
+    default: mentor
+
+runs:
+  using: composite
+  steps:
+    - name: Install dependencies
+      shell: bash
+      working-directory: ${{ github.action_path }}
+      run: npm ci
+
+    - name: Review Pull Request
+      shell: bash
+      working-directory: ${{ github.action_path }}
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+        INPUT_AUDIENCE: ${{ inputs.audience }}
+        INPUT_FOCUS: ${{ inputs.focus }}
+        INPUT_LANGUAGE: ${{ inputs.language }}
+        INPUT_STYLE: ${{ inputs.style }}
+      run: node scripts/github-action.mjs

@@ -1,0 +1,35 @@
+name: AI Code Reviewer
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+  pull-requests: read
+  issues: write
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install AI Code Reviewer
+        run: npm ci
+
+      - name: Review Pull Request
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          INPUT_AUDIENCE: beginner
+          INPUT_FOCUS: general
+          INPUT_LANGUAGE: ko
+          INPUT_STYLE: mentor
+        run: node scripts/github-action.mjs
