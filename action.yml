@@ -1,6 +1,6 @@
-name: AI Code Reviewer
+name: DiffMentor
 description: Beginner-friendly AI Pull Request mentor with Markdown review comments.
-author: AI Code Reviewer contributors
+author: DiffMentor contributors
 
 inputs:
   audience:

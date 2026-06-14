@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "AI Code Reviewer",
-  description: "Beginner-friendly AI code review for GitHub Pull Requests"
+  title: "DiffMentor",
+  description: "Beginner-friendly AI Pull Request mentor for GitHub"
 };
 
 export default function RootLayout({

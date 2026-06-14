@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for helping improve AI Code Reviewer.
+Thanks for helping improve DiffMentor.
 
 ## Local setup
 

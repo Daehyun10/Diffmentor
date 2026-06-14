@@ -119,7 +119,7 @@ export default function Home() {
           <div className="flex flex-col justify-between gap-5">
             <div>
               <p className="text-sm font-semibold text-[#275cc8]">Beginner-friendly PR mentor</p>
-              <h1 className="mt-2 text-3xl font-bold tracking-normal sm:text-4xl">AI Code Reviewer</h1>
+              <h1 className="mt-2 text-3xl font-bold tracking-normal sm:text-4xl">DiffMentor</h1>
               <p className="mt-3 text-base leading-7 text-[#566273]">
                 Review a GitHub Pull Request as Markdown with severity labels, fix examples, and learning notes.
               </p>

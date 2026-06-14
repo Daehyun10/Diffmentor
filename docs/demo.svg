@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1440" height="980" viewBox="0 0 1440 980" role="img" aria-labelledby="title desc">
-  <title id="title">AI Code Reviewer demo</title>
-  <desc id="desc">Demo screenshot-style preview of the AI Code Reviewer web app showing review options and Markdown review output.</desc>
+  <title id="title">DiffMentor demo</title>
+  <desc id="desc">Demo screenshot-style preview of the DiffMentor web app showing review options and Markdown review output.</desc>
   <rect width="1440" height="980" fill="#f5f7fb"/>
   <rect x="0" y="0" width="1440" height="278" fill="#ffffff"/>
   <line x1="0" y1="278" x2="1440" y2="278" stroke="#d9dee8"/>
 
   <text x="72" y="64" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" fill="#275cc8">Beginner-friendly PR mentor</text>
-  <text x="72" y="116" font-family="Arial, Helvetica, sans-serif" font-size="46" font-weight="800" fill="#17191f">AI Code Reviewer</text>
+  <text x="72" y="116" font-family="Arial, Helvetica, sans-serif" font-size="46" font-weight="800" fill="#17191f">DiffMentor</text>
   <text x="72" y="154" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#566273">Review a GitHub Pull Request as Markdown with severity labels, fix examples, and learning notes.</text>
 
   <rect x="72" y="190" width="118" height="64" rx="8" fill="#fbfcff" stroke="#d9dee8"/>

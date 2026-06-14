@@ -1,10 +1,10 @@
-# AI Code Reviewer
+# DiffMentor
 
-Beginner-friendly AI Pull Request mentor for GitHub. It reviews PR diffs and returns Markdown with severity labels, clear reasoning, fix suggestions, example code, and learning notes.
+Beginner-friendly AI Pull Request mentor for GitHub. DiffMentor reviews PR diffs and returns Markdown with severity labels, clear reasoning, fix suggestions, example code, test ideas, confidence, and learning notes.
 
 > Positioning: not just "AI found problems", but "a friendly senior developer explains the review so the author learns."
 
-![AI Code Reviewer demo](docs/demo.svg)
+![DiffMentor demo](docs/demo.svg)
 
 ## Features
 
@@ -17,7 +17,7 @@ Beginner-friendly AI Pull Request mentor for GitHub. It reviews PR diffs and ret
 - Review focus: general, security, performance, frontend, testing
 - Output language: Korean or English
 - Review style: mentor, checklist, strict
-- CLI usage with `npx` or local `npm run cli`
+- CLI usage with `diffmentor`
 - GitHub Actions integration that comments on PRs automatically
 - Token-aware diff truncation
 
@@ -32,11 +32,11 @@ Beginner-friendly AI Pull Request mentor for GitHub. It reviews PR diffs and ret
 7. OpenAI generates a Markdown review with risk level, findings, suggested fixes, tests, and learning notes.
 8. The web app renders the Markdown. The CLI prints it. GitHub Actions can post it as a PR comment.
 
-The important security boundary is that API keys are used only in the server/API process, CLI process, or GitHub Actions runner. The browser never receives `OPENAI_API_KEY` or `GITHUB_TOKEN`.
+API keys are used only in the server/API process, CLI process, or GitHub Actions runner. The browser never receives `OPENAI_API_KEY` or `GITHUB_TOKEN`.
 
 ## Review Quality Standard
 
-The reviewer is prompted to behave like a principal-level reviewer, not a generic chatbot. A high-quality review should:
+DiffMentor is prompted to behave like a principal-level reviewer, not a generic chatbot. A high-quality review should:
 
 - stay grounded in the provided diff
 - avoid inventing issues when context is missing
@@ -62,26 +62,28 @@ The reviewer is prompted to behave like a principal-level reviewer, not a generi
 ## Folder Structure
 
 ```txt
-ai-code-reviewer/
+diffmentor/
 ├─ .github/
 │  ├─ workflows/
-│  │  └─ ai-code-reviewer.yml       # Example workflow for automatic PR comments
+│  │  └─ ai-code-reviewer.yml
 │  └─ pull_request_template.md
 ├─ app/
-│  ├─ api/review/route.ts           # Web API endpoint
-│  ├─ globals.css                   # Tailwind and Markdown styles
+│  ├─ api/review/route.ts
+│  ├─ globals.css
 │  ├─ layout.tsx
-│  └─ page.tsx                      # Web UI
+│  └─ page.tsx
+├─ docs/
+│  └─ demo.svg
 ├─ lib/
-│  ├─ demoReview.ts                 # Demo review output
-│  ├─ github.ts                     # GitHub URL parsing, PR files, comments
-│  ├─ openai.ts                     # OpenAI review generation
-│  ├─ reviewOptions.ts              # Review profile types
-│  └─ reviewPrompt.ts               # Prompt builder
+│  ├─ demoReview.ts
+│  ├─ github.ts
+│  ├─ openai.ts
+│  ├─ reviewOptions.ts
+│  └─ reviewPrompt.ts
 ├─ scripts/
-│  ├─ ai-code-reviewer.mjs          # CLI
-│  └─ github-action.mjs             # GitHub Actions runner
-├─ action.yml                       # Composite GitHub Action metadata
+│  ├─ ai-code-reviewer.mjs
+│  └─ github-action.mjs
+├─ action.yml
 ├─ .env.example
 ├─ CONTRIBUTING.md
 ├─ LICENSE
@@ -92,8 +94,8 @@ ai-code-reviewer/
 ## Installation
 
 ```bash
-git clone https://github.com/your-name/ai-code-reviewer.git
-cd ai-code-reviewer
+git clone https://github.com/Daehyun10/Diffmentor.git
+cd Diffmentor
 npm install
 ```
 
@@ -107,9 +109,7 @@ GITHUB_TOKEN=your_github_personal_access_token_here
 OPENAI_MODEL=gpt-4.1-mini
 ```
 
-`OPENAI_MODEL` is optional. API keys are read only on the server or in the CLI process. They are never exposed to the browser client.
-
-If keys are missing, the app runs in demo mode and returns a sample review so you can inspect the full workflow.
+`OPENAI_MODEL` is optional. If keys are missing, the app runs in demo mode.
 
 ## Run the Web App
 
@@ -121,6 +121,12 @@ Open:
 
 ```txt
 http://localhost:3000
+```
+
+Demo deep link:
+
+```txt
+http://localhost:3000/?demo=1
 ```
 
 ## Use the CLI
@@ -165,7 +171,7 @@ Useful options:
 Add this workflow to another repository:
 
 ```yaml
-name: AI Code Reviewer
+name: DiffMentor
 
 on:
   pull_request:
@@ -181,7 +187,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: your-name/ai-code-reviewer@main
+      - uses: Daehyun10/Diffmentor@main
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         with:
@@ -210,30 +216,9 @@ The action uses GitHub's built-in `${{ github.token }}` for PR comments and `OPE
 }
 ```
 
-Response:
-
-```json
-{
-  "review": "# AI Code Review\n\n...",
-  "metadata": {
-    "owner": "vercel",
-    "repo": "next.js",
-    "pullRequestNumber": 123,
-    "reviewedFileCount": 8,
-    "demoMode": false,
-    "options": {
-      "audience": "beginner",
-      "focus": "security",
-      "language": "ko",
-      "style": "mentor"
-    }
-  }
-}
-```
-
 ## Why This Can Stand Out
 
-Most AI review tools are optimized for finding issues. This project is optimized for teaching the developer during review.
+Most AI review tools are optimized for finding issues. DiffMentor is optimized for teaching the developer during review.
 
 Strong differentiators:
 
@@ -246,8 +231,8 @@ Strong differentiators:
 ## Roadmap
 
 - Inline file-level PR review comments
-- Review caching to reduce OpenAI cost
-- custom team review rules in `ai-reviewer.config.json`
+- review caching to reduce OpenAI cost
+- custom team review rules in `diffmentor.config.json`
 - severity filters in the UI
 - repository history awareness
 - support for GitLab and Bitbucket

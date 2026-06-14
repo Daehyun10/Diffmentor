@@ -1,9 +1,9 @@
 {
-  "name": "ai-code-reviewer",
+  "name": "diffmentor",
   "version": "0.1.0",
-  "description": "Beginner-friendly AI code review web service for GitHub Pull Requests.",
+  "description": "Beginner-friendly AI Pull Request mentor for GitHub.",
   "bin": {
-    "ai-code-reviewer": "./scripts/ai-code-reviewer.mjs"
+    "diffmentor": "./scripts/ai-code-reviewer.mjs"
   },
   "scripts": {
     "dev": "next dev",
