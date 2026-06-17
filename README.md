@@ -9,8 +9,6 @@
 
 DiffMentor is a beginner-friendly AI Pull Request mentor for GitHub. It reviews PR diffs and returns Markdown with severity labels, clear reasoning, fix suggestions, example code, test ideas, confidence, and learning notes.
 
-> DiffMentor is not just "AI found problems." It explains code review like a friendly senior developer so the author can learn while fixing the PR.
-
 ## Features
 
 - Web UI built with Next.js and Tailwind CSS
