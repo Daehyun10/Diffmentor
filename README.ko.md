@@ -4,8 +4,6 @@
 
 DiffMentor는 GitHub Pull Request의 변경 사항(diff)을 읽고, 초보자도 이해할 수 있는 코드 리뷰를 Markdown으로 생성하는 AI PR 멘토입니다.
 
-단순히 "문제가 있다"라고 말하는 리뷰어가 아니라, 왜 문제인지, 어떤 상황에서 실패할 수 있는지, 어떻게 고치면 좋은지, 어떤 테스트를 추가하면 좋은지까지 설명하는 것을 목표로 합니다.
-
 ![DiffMentor demo](docs/demo.svg)
 
 ## 주요 기능
